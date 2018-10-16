@@ -6,15 +6,17 @@
 #    By: prussell <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/10/16 14:22:06 by prussell          #+#    #+#              #
-#    Updated: 2018/10/16 14:27:02 by prussell         ###   ########.fr        #
+#    Updated: 2018/10/16 15:44:36 by prussell         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
+PKGS = yojson
+
 all:
-	ocamlbuild main.byte
+	ocamlbuild -use-ocamlfind -pkgs '$(PKGS)' 'main.byte'
 
 native:
-	ocamlbuild main.native
+	ocamlbuild -use-ocamlfind -pkgs '$(PKGS)' 'main.native'
 
 clean:
 	ocamlbuild -clean
@@ -22,4 +24,4 @@ clean:
 re: clean all
 
 dep:
-	opam install yojson
+	opam install $(PKGS)
