@@ -28,6 +28,7 @@ let load_file filename =
 		| _ -> ()
 *)
 
+(*
 let prog filename = 
     Yojson.Basic.from_file filename
 
@@ -40,4 +41,8 @@ let main argc argv =
 
 let () = 
     let argv = Sys.argv in
-    	main (Array.length argv) argv
+			main (Array.length argv) argv
+*)
+
+let () =
+		Turing_Machine.print_intro ()

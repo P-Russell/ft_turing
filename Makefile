@@ -10,18 +10,25 @@
 #                                                                              #
 # **************************************************************************** #
 
-PKGS = yojson
+#PKGS = yojson
 
-all:
-	ocamlbuild -use-ocamlfind -pkgs '$(PKGS)' 'main.byte'
+#all:
+#	ocamlbuild -use-ocamlfind -pkgs '$(PKGS)' 'main.byte'
 
-native:
-	ocamlbuild -use-ocamlfind -pkgs '$(PKGS)' 'main.native'
+#native:
+#	ocamlbuild -use-ocamlfind -pkgs '$(PKGS)' 'main.native'
 
-clean:
-	ocamlbuild -clean
+#clean:
+#	ocamlbuild -clean
 
-re: clean all
+#re: clean all
+#
+#dep:
+#	opam install $(PKGS)
 
-dep:
-	opam install $(PKGS)
+RESULT        = turing_machine
+SOURCES       = Print.ml Resolving.ml Turing_Machine.ml main.ml
+PACKS         = yojson num
+THREADS       = yes
+OCAMLMAKEFILE = OCamlMakefile
+include $(OCAMLMAKEFILE)
