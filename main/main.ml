@@ -12,20 +12,20 @@
 
 (*
 let load_file filename = 
-	let lines = ref [] in
-		try
-		let fs = open_in filename in
-		    while true do
-		    	let line = input_line fs in
-		    	lines := List.append !lines [line];
-		    done;
-		with 
-		| End_of_file ->
-		    let lines_array = (Array.of_list !lines) in
-		    let rand = Random.self_init (); Random.int (Array.length lines_array) in
-		    print_endline (lines_array.(rand));
-		| Sys_error e -> print_endline ("bad filename " ^ e)
-		| _ -> ()
+let lines = ref [] in
+try
+let fs = open_in filename in
+while true do
+let line = input_line fs in
+lines := List.append !lines [line];
+done;
+with 
+| End_of_file ->
+let lines_array = (Array.of_list !lines) in
+let rand = Random.self_init (); Random.int (Array.length lines_array) in
+print_endline (lines_array.(rand));
+| Sys_error e -> print_endline ("bad filename " ^ e)
+| _ -> ()
 *)
 
 (*
@@ -41,8 +41,10 @@ let main argc argv =
 
 let () = 
     let argv = Sys.argv in
-			main (Array.length argv) argv
+main (Array.length argv) argv
 *)
 
 let () =
-		Turing_Machine.print_intro ()
+  Intro.i ();
+  Launch_tape.l_t ();
+  print_endline ""
