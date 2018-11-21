@@ -6,25 +6,9 @@
 #    By: prussell <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/10/16 14:22:06 by prussell          #+#    #+#              #
-#    Updated: 2018/10/16 15:44:36 by prussell         ###   ########.fr        #
+#    Updated: 2018/11/21 09:04:16 by jbadenho         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
-
-#PKGS = yojson
-
-#all:
-#	ocamlbuild -use-ocamlfind -pkgs '$(PKGS)' 'main.byte'
-
-#native:
-#	ocamlbuild -use-ocamlfind -pkgs '$(PKGS)' 'main.native'
-
-#clean:
-#	ocamlbuild -clean
-
-#re: clean all
-#
-#dep:
-#	opam install $(PKGS)
 
 PRINT_FOLDER   = main/Type_transition.ml main/Type_tape.ml print/Char_list.ml print/String_list.ml print/Help.ml
 RESOLVE_FOLDER = resolve/File_name.ml resolve/Json_file.ml resolve/Name.ml resolve/Alphabet.ml resolve/Blank.ml resolve/States.ml resolve/Initial.ml resolve/Finals.ml resolve/Transition_object.ml resolve/Transition_list.ml resolve/Transition.ml resolve/Input.ml
