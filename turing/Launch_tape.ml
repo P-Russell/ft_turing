@@ -28,7 +28,11 @@ let l_t () =
           else 
             (let final_tape = Get_tape.g_t tape_letters pos next_trs (List.nth tape_letters pos) 
              in
-             Tape.p_t final_tape;);)
+             Tape.p_t final_tape;);
+          if Sys.argv.(1) = "-O"
+          then
+             Print_time_complexity.p_t_c (Num.num_of_int !trs_count);
+             print_char '\n'; exit 0)
     else (
       if pos = -1 
       then (let tape_letters = '.' :: tape_letters 

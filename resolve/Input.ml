@@ -1,9 +1,13 @@
 let i =
   try
     begin
-      let input = Sys.argv.(2)
+      let input = if Sys.argv.(1) = "-O" 
+        then 
+          Sys.argv.(3)
+        else 
+          Sys.argv.(2)
       in
-      let str_to_char_lst str =
+      let str_to_char_list str =
         let rec exp i lst =
           if i < 0 
           then 
@@ -13,7 +17,7 @@ let i =
         in 
         exp (String.length str - 1) []
       in
-      let input_lst = str_to_char_lst input
+      let input_lst = str_to_char_list input
       in
       if (not (List.for_all (fun x -> List.mem x Alphabet.a && x <> Blank.b) input_lst))
       then

@@ -46,5 +46,5 @@ main (Array.length argv) argv
 
 let () =
   Intro.i ();
-  Launch_tape.l_t ();
+  ignore (Launch_tape.l_t ());
   print_endline ""

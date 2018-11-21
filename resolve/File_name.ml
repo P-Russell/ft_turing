@@ -4,6 +4,8 @@ let f_n =
     if arg1 = "-h" || arg1 = "--help" 
     then
       (Help.p_h (); exit 0)
+    else if (arg1 = "-O" && Array.length Sys.argv = 4) then
+      Sys.argv.(2)
     else if (Array.length Sys.argv = 3) 
     then
       arg1
