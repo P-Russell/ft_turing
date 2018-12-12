@@ -10,6 +10,10 @@
 (*                                                                            *)
 (* ************************************************************************** *)
 
+(* Called by P_transition.ml, P_transitions.ml, Transition_object.ml, 
+  Action_to_string.ml, Get_letter_to_write.ml, Get_next_transition.ml, 
+  Get_pos.ml *)
+
 type letter     = char
 type state      = string
 type direction  = Right | Left

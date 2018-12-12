@@ -10,6 +10,8 @@
 (*                                                                            *)
 (* ************************************************************************** *)
 
+(* Called by Print_time_complexity.ml *)
+
 let f_n n =
   let open Num 
   in

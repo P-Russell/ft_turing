@@ -10,6 +10,8 @@
 (*                                                                            *)
 (* ************************************************************************** *)
 
+(* Called by P_transition.ml, P_transitions.ml *)
+
 let a_t_s ac = 
   if ac = Type_transition.Right 
   then 

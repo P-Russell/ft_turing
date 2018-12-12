@@ -10,6 +10,8 @@
 (*                                                                            *)
 (* ************************************************************************** *)
 
+(* Called by Intro.ml *)
+
 let p_t () =
   let rec resolve_trans read_trans_name trans_list =
     List.iter (fun x -> match x with

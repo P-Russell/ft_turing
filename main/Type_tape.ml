@@ -10,6 +10,9 @@
 (*                                                                            *)
 (* ************************************************************************** *)
 
+(* Called P_transition.ml, Tape.ml, Get_letter_to_write.ml, Get_letters.ml, 
+  Get_next_transition.ml, Get_pos.ml, Get_tape.ml *)
+
 type letter    = char
 type state     = string
 type direction = Right | Left

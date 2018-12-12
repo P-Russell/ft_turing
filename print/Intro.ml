@@ -10,6 +10,8 @@
 (*                                                                            *)
 (* ************************************************************************** *)
 
+(* Called by main.ml *)
+
 let i () =
   print_string  "---~ Turing Machine ->";
   Printf.printf " %s ~---\n" (Name.n);

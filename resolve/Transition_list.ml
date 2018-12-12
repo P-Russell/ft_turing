@@ -10,6 +10,8 @@
 (*                                                                            *)
 (* ************************************************************************** *)
 
+(* Called by Transition.ml *)
+
 let t_l ((name, json) : (string * Yojson.Basic.json)) =
   let open Yojson.Basic.Util 
   in

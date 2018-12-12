@@ -10,6 +10,9 @@
 (*                                                                            *)
 (* ************************************************************************** *)
 
+(* val p_h : unit -> unit *)
+(* Called by File_name.ml *)
+
 let p_h () =
   print_endline "usage:                ./ft_turing [-h][-O] jsonfile input
 

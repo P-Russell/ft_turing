@@ -10,6 +10,8 @@
 (*                                                                            *)
 (* ************************************************************************** *)
 
+(* Called by Init_tape.ml, Launch_tape.ml *)
+
 let g_t letters pos transition read_letter =
   {
     Type_tape.letters = letters;

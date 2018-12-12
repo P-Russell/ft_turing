@@ -10,6 +10,8 @@
 (*                                                                            *)
 (* ************************************************************************** *)
 
+(* Called by Launch_tape.ml *)
+
 let g_l tape wr_letter =
   List.mapi (fun i x -> if i = Type_tape.(tape.pos) 
               then 

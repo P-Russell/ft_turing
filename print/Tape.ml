@@ -10,6 +10,8 @@
 (*                                                                            *)
 (* ************************************************************************** *)
 
+(* Called by Launch_tape.ml *)
+
 let p_t tape =
   print_string "(";
   List.iteri (fun i x ->

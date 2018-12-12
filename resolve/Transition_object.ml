@@ -10,6 +10,8 @@
 (*                                                                            *)
 (* ************************************************************************** *)
 
+(* Called by Transition_list.ml *)
+
 let t_o (obj: Yojson.Basic.json) =
   let open Yojson.Basic.Util
   in

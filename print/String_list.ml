@@ -10,6 +10,9 @@
 (*                                                                            *)
 (* ************************************************************************** *)
 
+(* val s_l : string list -> unit *)
+(* Called by Intro.ml *)
+
 let rec s_l list_ =
   match list_ with
   | head::[]   -> print_string head

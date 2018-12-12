@@ -10,6 +10,8 @@
 (*                                                                            *)
 (* ************************************************************************** *)
 
+(* Called by Tape.ml *)
+
 let p_t tape =
   let resolve_trs trs_lst =
     List.iter (fun x -> match x with

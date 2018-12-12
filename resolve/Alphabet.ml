@@ -10,6 +10,10 @@
 (*                                                                            *)
 (* ************************************************************************** *)
 
+(* val a : char list *)
+(* Called by Intro.ml, Blank.ml, Input.ml, Transition_object.ml *)
+
+
 let a = 
   try
     begin

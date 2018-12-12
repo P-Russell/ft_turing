@@ -10,6 +10,8 @@
 (*                                                                            *)
 (* ************************************************************************** *)
 
+(* Called by Intro.ml, Finals.ml, Initial.ml, Transition_object.ml *)
+
 let s =
   try
     begin

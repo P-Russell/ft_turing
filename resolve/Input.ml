@@ -10,6 +10,8 @@
 (*                                                                            *)
 (* ************************************************************************** *)
 
+(* Called by Print_time_complexity.ml, Init_tape.ml *)
+
 let i =
   try
     begin

@@ -10,6 +10,10 @@
 (*                                                                            *)
 (* ************************************************************************** *)
 
+(* val j_f : Yojson.Basic.json *)
+(* Called by Alphabet.ml, Blank.ml, Finals.ml, Initial.ml, Name.ml, States.ml, 
+  Transition.ml *)
+
 let j_f =
   try
     Yojson.Basic.from_file File_name.f_n

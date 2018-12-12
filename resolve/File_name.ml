@@ -10,6 +10,9 @@
 (*                                                                            *)
 (* ************************************************************************** *)
 
+(* val f_n : string *)
+(* Called by Json_file.ml *)
+
 let f_n =
   try 
     let arg1 = Sys.argv.(1) in

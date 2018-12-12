@@ -10,6 +10,8 @@
 (*                                                                            *)
 (* ************************************************************************** *)
 
+(* Called by Launch_tape.ml *)
+
 let g_n_t tape =
   try
     let trs_lst = List.find (fun x -> (fst x) = Type_tape.(tape.trs)) Transition.t 
