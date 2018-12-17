@@ -10,6 +10,7 @@
 (*                                                                            *)
 (* ************************************************************************** *)
 
+(* val t_l : string * Yojson.Basic.json -> string * transition list *)
 (* Called by Transition.ml *)
 
 let t_l ((name, json) : (string * Yojson.Basic.json)) =

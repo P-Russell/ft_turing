@@ -10,6 +10,7 @@
 (*                                                                            *)
 (* ************************************************************************** *)
 
+(* val f_n : Num.num -> Num.num *)
 (* Called by Print_time_complexity.ml *)
 
 let f_n n =

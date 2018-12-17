@@ -10,6 +10,7 @@
 (*                                                                            *)
 (* ************************************************************************** *)
 
+(* val g_t : letter list -> int -> state -> letter -> tape_data *)
 (* Called by Init_tape.ml, Launch_tape.ml *)
 
 let g_t letters pos transition read_letter =

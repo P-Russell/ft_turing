@@ -10,6 +10,7 @@
 (*                                                                            *)
 (* ************************************************************************** *)
 
+(* val t : (string * transition list) list *)
 (* Called P_transition.ml, P_transitions.ml, Get_letter_to_write.ml, 
   Get_next_transition.ml, Get_pos.ml *)
 

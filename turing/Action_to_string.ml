@@ -10,6 +10,7 @@
 (*                                                                            *)
 (* ************************************************************************** *)
 
+(* val a_t_s : direction -> string *)
 (* Called by P_transition.ml, P_transitions.ml *)
 
 let a_t_s ac = 

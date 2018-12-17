@@ -10,6 +10,8 @@
 (*                                                                            *)
 (* ************************************************************************** *)
 
+(* Where the starting parameters of the program are. *)
+
 let () =
   Intro.i ();
   ignore (Launch_tape.l_t ());

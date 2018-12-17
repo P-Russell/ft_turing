@@ -10,6 +10,7 @@
 (*                                                                            *)
 (* ************************************************************************** *)
 
+(* val g_l : tape_data -> letter -> letter list *)
 (* Called by Launch_tape.ml *)
 
 let g_l tape wr_letter =
