@@ -19,3 +19,5 @@ let a_t_s ac =
     "RIGHT" 
   else 
     "LEFT"
+
+(* Tells the direction of movement on the input tape. *)

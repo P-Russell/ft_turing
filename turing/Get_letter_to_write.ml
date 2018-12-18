@@ -16,6 +16,8 @@
 let g_l_t_w tape =
   let trs_lst = List.find (fun x -> (fst x) = Type_tape.(tape.trs)) Transition.t 
   in
-  let trs = List.find (fun x -> x.Type_transition.read = Type_tape.(tape.lread)) (snd trs_lst) 
+  let trs = List.find (fun x -> x.Type_transition.read = Type_tape.(tape.lread)) (snd trs_lst) (* Return the second component of a pair. *)
   in
   trs.Type_transition.write
+
+(* Gets the letter to write from the input tape. *)

@@ -23,3 +23,5 @@ let g_p tape =
     Type_tape.(tape.pos) + 1 
   else
     Type_tape.(tape.pos) - 1
+
+(* Gets the position on the input tape. *)

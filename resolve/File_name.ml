@@ -28,3 +28,7 @@ let f_n =
       (print_endline "Error: Wrong arguments. -h for details."; exit 0)
   with 
   | exn -> print_endline "Error: argv1 must be a valid json file."; exit 0
+
+(* Prints the help file and adds the print complexity option, sets the 
+  turing machine file or when an error is found the relavent message is 
+  printed. *)

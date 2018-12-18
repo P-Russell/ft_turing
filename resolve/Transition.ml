@@ -30,3 +30,7 @@ let t =
     end
   with
   | exn -> print_endline "Error: transitions not well formatted."; exit 0
+
+(* Looks for the string transitions then sends the following information as a 
+  list. *)
+(* If an incorrect type is found a error message is printed. *)

@@ -24,3 +24,5 @@ let t_l ((name, json) : (string * Yojson.Basic.json)) =
     | [] -> (name, acc)
   in
   loop transition []
+
+(* Transforms the data in the json file into a string. *)

@@ -18,3 +18,6 @@ type letter     = char
 type state      = string
 type direction  = Right | Left
 type transition = {read: letter; to_state: state; write: letter; action: direction}
+
+(* Used for declaring the types for different expressions with the curly 
+  brackets giving a record. *)

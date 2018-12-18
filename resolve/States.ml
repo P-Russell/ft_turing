@@ -29,3 +29,7 @@ let s =
     end
   with
   | exn -> print_endline "Error: states not well formatted."; exit 0
+
+(* Looks for the string states then sends the following information as a 
+  string list. *)
+(* If an incorrect type is found a error message is printed. *)

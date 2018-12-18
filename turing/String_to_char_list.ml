@@ -22,3 +22,5 @@ let s_t_c_l str =
       exp (i - 1) (str.[i] :: lst)
   in 
   exp (String.length str - 1) []
+
+(* Takes a stringand placing it into a list. *)

@@ -16,3 +16,6 @@ let () =
   Intro.i ();
   ignore (Launch_tape.l_t ());
   print_endline ""
+
+(* Intro.ml only prints the turing parameters that will be used. *)
+(* Launch_tape.ml initiates the instructions for the turning machine. *)

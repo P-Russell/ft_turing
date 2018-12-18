@@ -45,3 +45,6 @@ let i =
     end
   with
   | exn -> print_endline "Error: Invalid input field. -h for details"; exit 0
+
+(* Check if the -O flag is present, the setting the relavent system argument. *)
+(* Also checks if the turing machine is following the correct rules. *)

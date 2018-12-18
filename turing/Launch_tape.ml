@@ -61,3 +61,6 @@ let l_t () =
         write_tape (Get_tape.g_t tape_letters pos next_trs (List.nth tape_letters pos)))
   in
   write_tape (Init_tape.i_t ())
+
+(* Moves from starting position of the input tape through the turing instructions 
+  to manipulate the input according to the turing instructions. *)

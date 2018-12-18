@@ -19,3 +19,5 @@ let g_l tape wr_letter =
                 wr_letter 
               else x) 
     Type_tape.(tape.letters)
+
+(* Gets the letter from the input tape. *)

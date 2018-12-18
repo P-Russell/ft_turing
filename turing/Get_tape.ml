@@ -20,3 +20,5 @@ let g_t letters pos transition read_letter =
     Type_tape.trs     = transition;
     Type_tape.lread   = read_letter
   }
+
+(* Set the tape record. *)

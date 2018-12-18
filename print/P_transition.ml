@@ -29,3 +29,10 @@ let p_t tape =
       ) trs_lst
   in
   List.iter (fun x -> if (fst x) = Type_tape.(tape.trs) then resolve_trs (snd x)) Transition.t
+
+(* List is resolved before Transition is called. *)
+(* In resolved matching in a record uses the types defined in Type_transition 
+  to declare the expressions. Here the record is also matched with the unit 
+  (exit function). *)
+(* Action of what the instruction is going to do is found, as well as the 
+  states are printed. *)

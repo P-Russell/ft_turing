@@ -23,3 +23,9 @@ let p_t () =
           (Printf.printf "( %s, %c ) -> ( %s, %c, %s )\n" (read_trans_name) (rd) (st) (wr) (Action_to_string.a_t_s(ac));)) trans_list
   in
   List.iter (fun x -> resolve_trans (fst x) (snd x)) Transition.t
+
+(* List is resolved before Transition is called. *)
+(* In resolved matching in a record uses the types defined in Type_transition 
+  to declare the expressions. *)
+(* Action of what the instruction is going to do is found, as well as the 
+  states are printed. *)

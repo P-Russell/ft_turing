@@ -25,3 +25,5 @@ let f_n n =
     else
       fact_loop (nb -/ one) (acc */ nb)
   in fact_loop n one
+
+(* Finds the factoral for calculation in time complexity. *)

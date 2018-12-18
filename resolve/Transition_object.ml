@@ -46,3 +46,5 @@ let t_o (obj: Yojson.Basic.json) =
       in
       {Type_transition.read = read.[0]; Type_transition.to_state = to_state; Type_transition.write = write.[0]; Type_transition.action = act}
     end
+
+(* Checks if the correct conditions for the turing machine is followed. *)

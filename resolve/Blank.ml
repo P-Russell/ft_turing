@@ -28,3 +28,7 @@ let b =
     end
   with
   | exn -> print_endline "Error: blank not well formatted."; exit 0
+
+(* Looks for the string blank then sends the following information as a 
+  char. *)
+(* If an incorrect type is found a error message is printed. *)

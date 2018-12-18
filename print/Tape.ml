@@ -23,3 +23,5 @@ let p_t tape =
         print_char x) Type_tape.(tape.letters);
   print_string ") ";
   P_transition.p_t tape
+
+(* Prints the movement of the character being processed on the input, in green *)

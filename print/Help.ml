@@ -20,3 +20,5 @@ positional arguments: jsonfile   -> json description of the machine
                       input      -> input of the machine
 
 optional arguments:   -h, --help -> show this help message and exit"
+
+(* Gives the instructions when the wrong input is typed in the stdin. *)

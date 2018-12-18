@@ -20,3 +20,7 @@ let n =
     Json_file.j_f |> member "name" |> to_string
   with
   | exn -> print_endline "Error: Can not read name field."; exit 0
+
+(* Looks for the string name then sends the following information as a 
+  string. *)
+(* If an incorrect type is found a error message is printed. *)

@@ -23,3 +23,12 @@ let i () =
   print_string  "Finals   : ( "; String_list.s_l (Finals.f); print_endline " )";
   P_transitions.p_t ();
   print_endline "---~ Turing Outputs ~---"
+
+(* Name of the turing machine is printed. *)
+(* Alphabet is the set of symbols used to run through the instructions. *)
+(* Blank is the element used to let the machine know it has reached the 
+  end. *)
+(* States are the instructions telling the machine what to do. *)
+(* Initial is the starting instruction. *)
+(* Finals terminate te program. *)
+(* P_transitions print the basics of the instructions going to be used. *)

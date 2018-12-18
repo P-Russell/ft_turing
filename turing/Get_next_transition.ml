@@ -23,3 +23,5 @@ let g_n_t tape =
   with
     Not_found -> 
     (Printf.printf "\n\x1b[31mError: read %c in transition %s not found\x1b[0m\n" (Type_tape.(tape.lread)) (Type_tape.(tape.trs)); exit 1)
+
+(* Finds the next instruction to be executed. *)

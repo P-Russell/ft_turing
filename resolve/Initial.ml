@@ -28,3 +28,7 @@ let i =
     end
   with
   | exn -> print_endline "Error: initial not well formatted."; exit 0
+
+(* Looks for the string initial then sends the following information as a 
+  string. *)
+(* If an incorrect type is found a error message is printed. *)

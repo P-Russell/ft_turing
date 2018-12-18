@@ -25,7 +25,7 @@ let p_t_c trs_count =
   let n = num_of_int (String.length Input.i) 
   in
   let rec get_degree acc nb =
-    if acc </ one 
+    if acc </ one (* Arbitrary-precision numeric operators </, -/, //, +/, >/, <=/ *)
     then 
       nb -/ one
     else 
@@ -51,3 +51,11 @@ let p_t_c trs_count =
        Printf.printf "\nTime complexity for n = %s and N = %s : O(n^%s)" (string_of_num n) (string_of_num trs_count) (string_of_num degree))
   else
     (Printf.printf "\nTime complexity for n = %s and N = %s : O(logn)" (string_of_num n) (string_of_num trs_count))
+
+(* For a Turing machine, the time complexity refers to the measure of the 
+  number of times the tape moves when the machine is initialized for some 
+  input symbols and the space complexity is the number of cells of the tape 
+  written. *)
+(* Num library is used for arbitrary-precision integer and rational 
+  arithmetic. *)
+(* Fact_num is called to find the factorial. *)

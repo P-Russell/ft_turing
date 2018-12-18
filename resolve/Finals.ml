@@ -35,3 +35,7 @@ let f =
     end
   with
   | exn -> []
+
+(* Looks for the string finals then sends the following information as a 
+  string list. *)
+(* If an incorrect type is found a error message is printed. *)

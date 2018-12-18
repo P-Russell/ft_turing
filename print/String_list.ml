@@ -18,3 +18,6 @@ let rec s_l list_ =
   | head::[]   -> print_string head
   | []         -> print_char '\n'
   | head::tail -> print_string head; print_string ", "; s_l tail
+
+  (* Matching with a list where the head is printed moving to the tail until the 
+  end of the list is found. *)
