@@ -1,0 +1,47 @@
+{
+	"name"              : "0^2n",
+	"alphabet"          : [ "0", "y", "n", ".", "(", ")" ],
+	"blank"             : ".",
+	"states"            : [ "pow ", "val ", "no  ", "rew ", "flip", "flop", "they", "then", "HALT" ],
+	"initial"           : "pow ",
+	"finals"            : [ "HALT" ],
+	"transitions"       : {
+		"pow "          : [
+            { "read"    : "(", "to_state"   : "pow ", "write"   : "(", "action" : "RIGHT"},
+            { "read"    : ".", "to_state"   : "flip", "write"   : ".", "action" : "RIGHT"},
+            { "read"    : ")", "to_state"   : "HALT", "write"   : ")", "action" : "LEFT" },
+			{ "read"    : "0", "to_state"   : "val ", "write"   : "0", "action" : "RIGHT"},
+			{ "read"    : "y", "to_state"   : "no  ", "write"   : "y", "action" : "RIGHT"},
+			{ "read"    : "n", "to_state"   : "no  ", "write"   : "n", "action" : "RIGHT"}
+		],
+		"val ": [
+			{ "read"    : ")", "to_state"   : "rew ", "write"   : ")", "action" : "LEFT" },
+			{ "read"    : "0", "to_state"   : "val ", "write"   : "0", "action" : "RIGHT"},
+			{ "read"    : "y", "to_state"   : "no  ", "write"   : "y", "action" : "RIGHT"},
+			{ "read"    : "n", "to_state"   : "no  ", "write"   : "n", "action" : "RIGHT"}
+		],
+		"no  ": [
+			{ "read"    : "0", "to_state"   : "no  ", "write"   : "0", "action" : "RIGHT"},
+			{ "read"    : "y", "to_state"   : "no  ", "write"   : "y", "action" : "RIGHT"},
+			{ "read"    : "n", "to_state"   : "no  ", "write"   : "n", "action" : "RIGHT"}
+		],
+		"rew ": [
+			{ "read"    : "0", "to_state"   : "rew ", "write"   : "0", "action" : "LEFT" },
+			{ "read"    : "(", "to_state"   : "flip", "write"   : "(", "action" : "RIGHT"}
+		],
+		"flip": [
+			{ "read"    : ")", "to_state"   : "they", "write"   : ")", "action" : "LEFT" },
+			{ "read"    : "0", "to_state"   : "flop", "write"   : "0", "action" : "RIGHT"}
+		],
+		"flop": [
+			{ "read"    : ")", "to_state"   : "then", "write"   : ")", "action" : "LEFT" },
+			{ "read"    : "0", "to_state"   : "flip", "write"   : "0", "action" : "RIGHT"}
+        ],
+        "they": [
+            { "read"    : "0", "to_state"   : "HALT", "write"   : "y", "action" : "LEFT" }
+        ],
+        "then": [
+            { "read"    : "0", "to_state"   : "HALT", "write"   : "n", "action" : "LEFT" }
+        ]
+	}
+}

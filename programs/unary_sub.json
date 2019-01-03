@@ -1,28 +1,37 @@
 {
-	"name" : "unary_sub",
-	"alphabet": [ "1", ".", "-", "=" ],
-	"blank" : ".",
-	"states" : [ "scan", "del ", "sub ", "skip", "HALT" ],
-	"initial" : "scan",
-	"finals" : [ "HALT" ],
-	"transitions" : {
-		"scan": [
-			{ "read" : ".", "to_state": "scan", "write": ".", "action": "RIGHT"},
-			{ "read" : "1", "to_state": "scan", "write": "1", "action": "RIGHT"},
-			{ "read" : "-", "to_state": "scan", "write": "-", "action": "RIGHT"},
-			{ "read" : "=", "to_state": "del ", "write": ".", "action": "LEFT" }
-		],
-		"del ": [
-			{ "read" : "1", "to_state": "sub ", "write": "=", "action": "LEFT" },
-			{ "read" : "-", "to_state": "HALT", "write": ".", "action": "LEFT" }
-		],
-		"sub ": [
-			{ "read" : "1", "to_state": "sub ", "write": "1", "action": "LEFT" },
-			{ "read" : "-", "to_state": "skip", "write": "-", "action": "LEFT" }
-		],
-		"skip": [
-			{ "read" : ".", "to_state": "skip", "write": ".", "action": "LEFT" },
-			{ "read" : "1", "to_state": "scan", "write": ".", "action": "RIGHT"}
-		]
+	"name"              : "unary_sub",
+	"alphabet"          : [ "1", ".", "-", "(", ")" ],
+	"blank"             : ".",
+	"states"            : [ "min ","oner", "onel", "delr", "dell", "HALT" ],
+	"initial"           : "min ",
+	"finals"            : [ "HALT" ],
+	"transitions"       : {
+		"min "          : [
+            { "read"    : "(", "to_state"   : "min ", "write"   : "(", "action" : "RIGHT"},
+			{ "read"    : "1", "to_state"   : "min ", "write"   : "1", "action" : "RIGHT"},
+            { "read"    : "-", "to_state"   : "oner", "write"   : "-", "action" : "RIGHT"}
+        ],
+        "oner"          : [
+            { "read"    : ".", "to_state"   : "oner", "write"   : ".", "action" : "RIGHT"},
+            { "read"    : "-", "to_state"   : "oner", "write"   : "-", "action" : "RIGHT"},
+            { "read"    : "1", "to_state"   : "onel", "write"   : "1", "action" : "LEFT" },
+            { "read"    : ")", "to_state"   : "HALT", "write"   : ")", "action" : "LEFT" }
+        ],
+        "onel"          : [
+            { "read"    : ".", "to_state"   : "onel", "write"   : ".", "action" : "LEFT" },
+            { "read"    : "-", "to_state"   : "onel", "write"   : "-", "action" : "LEFT" },
+            { "read"    : "1", "to_state"   : "delr", "write"   : "1", "action" : "RIGHT"},
+            { "read"    : "(", "to_state"   : "HALT", "write"   : "(", "action" : "RIGHT"}
+        ],
+        "delr"          : [
+            { "read"    : "-", "to_state"   : "delr", "write"   : "-", "action" : "RIGHT"},
+            { "read"    : ".", "to_state"   : "delr", "write"   : ".", "action" : "RIGHT"},
+			{ "read"    : "1", "to_state"   : "dell", "write"   : ".", "action" : "LEFT" }
+        ],
+        "dell"          : [
+            { "read"    : "-", "to_state"   : "dell", "write"   : ".", "action" : "LEFT" },
+            { "read"    : ".", "to_state"   : "dell", "write"   : ".", "action" : "LEFT" },
+            { "read"    : "1", "to_state"   : "oner", "write"   : ".", "action" : "RIGHT"}
+        ]
 	}
 }

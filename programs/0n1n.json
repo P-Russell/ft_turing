@@ -1,0 +1,45 @@
+{
+	"name"              : "0^n1^n",
+	"alphabet"          : [ "0", "1", "y", "n", ".", "(", ")" ],
+	"blank"             : ".",
+	"states"            : [ "ones", "to_r", "turn", "to_l", "un_n", "puty", "putn", "HALT" ],
+	"initial"           : "ones",
+	"finals"            : [ "HALT"],
+	"transitions"       : {
+		"ones"          : [
+            { "read"    : "(", "to_state"   : "ones", "write"   : "(", "action" : "RIGHT"},
+            { "read"    : "0", "to_state"   : "to_r", "write"   : ".", "action" : "RIGHT"},
+            { "read"    : "1", "to_state"   : "un_n", "write"   : ".", "action" : "RIGHT"},
+            { "read"    : ".", "to_state"   : "ones", "write"   : ".", "action" : "RIGHT"},
+            { "read"    : ")", "to_state"   : "puty", "write"   : ")", "action" : "LEFT" }
+        ],
+        "to_r"          : [
+            { "read"    : "0", "to_state"   : "to_r", "write"   : "0", "action" : "RIGHT"},
+            { "read"    : "1", "to_state"   : "to_r", "write"   : "1", "action" : "RIGHT"},
+            { "read"    : ".", "to_state"   : "turn", "write"   : ".", "action" : "LEFT" },
+            { "read"    : ")", "to_state"   : "turn", "write"   : ")", "action" : "LEFT" }
+        ],
+        "turn"          : [
+            { "read"    : "1", "to_state"   : "to_l", "write"   : ".", "action" : "LEFT" },
+            { "read"    : ".", "to_state"   : "turn", "write"   : ".", "action" : "RIGHT"},
+            { "read"    : ")", "to_state"   : "un_n", "write"   : ")", "action" : "LEFT" }
+        ],
+        "to_l"          : [
+            { "read"    : "0", "to_state"   : "to_l", "write"   : "0", "action" : "LEFT" },
+            { "read"    : "1", "to_state"   : "to_l", "write"   : "1", "action" : "LEFT" },
+            { "read"    : ".", "to_state"   : "ones", "write"   : ".", "action" : "RIGHT"}
+        ],
+        "un_n"          : [
+            { "read"    : ".", "to_state"   : "un_n", "write"   : ".", "action" : "RIGHT"},
+            { "read"    : "0", "to_state"   : "un_n", "write"   : ".", "action" : "RIGHT"},
+            { "read"    : "1", "to_state"   : "un_n", "write"   : ".", "action" : "RIGHT"},
+            { "read"    : ")", "to_state"   : "putn", "write"   : ")", "action" : "LEFT" }
+        ],
+        "puty"          : [
+            { "read"    : ".", "to_state"   : "HALT", "write"   : "y", "action" : "LEFT" }
+        ],
+        "putn"          : [
+            { "read"    : ".", "to_state"   : "HALT", "write"   : "n", "action" : "LEFT" }
+        ]
+	}
+}

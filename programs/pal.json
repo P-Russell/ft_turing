@@ -1,0 +1,63 @@
+{
+	"name"              : "palindrome",
+	"alphabet"          : [ "0", "1", "y", "n", ".", "(", ")" ],
+	"blank"             : ".",
+	"states"            : [ "pal ", "go_0", "is_0", "go_1", "is_1", "go_l", "is_y", "pr_y", "fory", "is_n", "pr_n", "forn", "HALT" ],
+	"initial"           : "pal ",
+	"finals"            : [ "HALT"],
+	"transitions"       : {
+		"pal "          : [
+            { "read"    : "(", "to_state"   : "pal ", "write"   : "(", "action" : "RIGHT"},
+            { "read"    : "0", "to_state"   : "go_0", "write"   : ".", "action" : "RIGHT"},
+            { "read"    : "1", "to_state"   : "go_1", "write"   : ".", "action" : "RIGHT"},
+            { "read"    : ".", "to_state"   : "is_y", "write"   : ".", "action" : "RIGHT"},
+            { "read"    : ")", "to_state"   : "HALT", "write"   : ")", "action" : "LEFT" }
+        ],
+        "go_0"          : [
+            { "read"    : "0", "to_state"   : "go_0", "write"   : "0", "action" : "RIGHT"},
+            { "read"    : "1", "to_state"   : "go_0", "write"   : "1", "action" : "RIGHT"},
+            { "read"    : ".", "to_state"   : "is_0", "write"   : ".", "action" : "LEFT" },
+            { "read"    : ")", "to_state"   : "is_0", "write"   : ")", "action" : "LEFT" }
+        ],
+        "is_0"          : [
+            { "read"    : "0", "to_state"   : "go_l", "write"   : ".", "action" : "LEFT" },
+            { "read"    : "1", "to_state"   : "is_n", "write"   : ".", "action" : "LEFT" },
+            { "read"    : ".", "to_state"   : "is_y", "write"   : ".", "action" : "LEFT" }
+        ],
+        "go_1"          : [
+            { "read"    : "0", "to_state"   : "go_1", "write"   : "0", "action" : "RIGHT"},
+            { "read"    : "1", "to_state"   : "go_1", "write"   : "1", "action" : "RIGHT"},
+            { "read"    : ".", "to_state"   : "is_1", "write"   : ".", "action" : "LEFT" },
+            { "read"    : ")", "to_state"   : "is_1", "write"   : ")", "action" : "LEFT" }
+        ],
+        "is_1"          : [
+            { "read"    : "0", "to_state"   : "is_n", "write"   : ".", "action" : "LEFT" },
+            { "read"    : "1", "to_state"   : "go_l", "write"   : ".", "action" : "LEFT" },
+            { "read"    : ".", "to_state"   : "is_y", "write"   : ".", "action" : "LEFT" }
+        ],
+        "go_l"          : [
+            { "read"    : "0", "to_state"   : "go_l", "write"   : "0", "action" : "LEFT" },
+            { "read"    : "1", "to_state"   : "go_l", "write"   : "1", "action" : "LEFT" },
+            { "read"    : ".", "to_state"   : "pal ", "write"   : ".", "action" : "RIGHT"},
+            { "read"    : "(", "to_state"   : "pal ", "write"   : "(", "action" : "RIGHT"}
+        ],
+        "is_y"          : [
+            { "read"    : "(", "to_state"   : "is_y", "write"   : "(", "action" : "RIGHT"},
+            { "read"    : ".", "to_state"   : "is_y", "write"   : ".", "action" : "RIGHT"},
+            { "read"    : ")", "to_state"   : "pr_y", "write"   : ")", "action" : "LEFT" }
+        ],
+        "pr_y"          : [
+            { "read"    : ".", "to_state"   : "HALT", "write"   : "y", "action" : "LEFT" }
+        ],
+        "is_n"          : [
+            { "read"    : "(", "to_state"   : "is_n", "write"   : "(", "action" : "RIGHT"},
+            { "read"    : "0", "to_state"   : "is_n", "write"   : ".", "action" : "RIGHT"},
+            { "read"    : "1", "to_state"   : "is_n", "write"   : ".", "action" : "RIGHT"},
+            { "read"    : ".", "to_state"   : "is_n", "write"   : ".", "action" : "RIGHT"},
+            { "read"    : ")", "to_state"   : "pr_n", "write"   : ")", "action" : "LEFT" }
+        ],
+        "pr_n"          : [
+            { "read"    : ".", "to_state"   : "HALT", "write"   : "n", "action" : "RIGHT"}
+        ]
+    }
+}

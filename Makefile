@@ -33,7 +33,8 @@ TURING_FOLDER	=	turing/Action_to_string.ml print/P_transitions.ml \
 					turing/Launch_tape.ml
 MAIN_FOLDER		=	main/main.ml
 RESULT			=	ft_turing
-SOURCES			=	$(PRINT_FOLDER) $(RESOLVE_FOLDER) $(TURING_FOLDER) $(MAIN_FOLDER) 
+SOURCES			=	$(PRINT_FOLDER) $(RESOLVE_FOLDER) $(TURING_FOLDER) \
+					$(MAIN_FOLDER) 
 PACKS			=	yojson num
 THREADS			=	yes
 OCAMLMAKEFILE	=	OCamlMakefile
